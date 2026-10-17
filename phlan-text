@@ -1,0 +1,2 @@
+#!/bin/bash
+awk -F '\\|' -v OFS = '\t' '{split($1, tax, "|"; $1= tax[1] OFS tax[2] OFS tax[3] OFS tax[4] OFS tax[5] OFS tax[6] OFS tax[7]}' "$file.tsv" > "${file%}-split.tsv" &&
