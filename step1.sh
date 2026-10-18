@@ -1,4 +1,5 @@
 #!/bin/bash
+#remove the first 4 rows of metaphlan bugs-list.tsv
 set -e
 
 for file in *.tsv; do
