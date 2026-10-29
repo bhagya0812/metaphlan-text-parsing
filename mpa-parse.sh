@@ -6,7 +6,7 @@ while getopts "f:l:" opt;do
     case {opt} in
     f)file="$OPTARG";;
     l)level="$OPTARG";;
-    *)echo "Usage $0 -f<file_pattern? -l<level_number>";exit 1;;
+    *)echo "Usage $0 -f<file_pattern> -l<level_number>";exit 1;;
 if [-z "$file"] | [-z "$level"]; then
     echo "Error: both -f and -l are required"
     exit 1
@@ -15,7 +15,7 @@ if [[! "$lfile"== *.tsv]]; then
     echo "Error: file needs to be tsv format"
     exit 1
 fi
-if [[!"$level"=~ ^[1-6]$]]; then
+if [[!"$level"=~ ^[1-6]$ ]]; then
     echo "Error: taxa levels are between 1-6"
     exit 1
 fi
